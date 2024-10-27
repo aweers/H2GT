@@ -102,11 +102,10 @@ def main():
                     wsi_path=wsi_path,
                 )
                 het_graph, HIM, info_dict = graph_constructor.construct_graph()
-                print("4")
                 if int((HIM.sum(dim=1) == 0).sum()) > 0:
-                    pbar.update(1)
-                    continue
-                print("5")
+                    # pbar.update(1)
+                    # continue
+                    print("HIM criterion hit")
                 save_dict = {"het_graph": het_graph, "HIM": HIM, "info_dict": info_dict}
                 # Make directory
                 if not Path(graph_config["out_dir"]).exists():
