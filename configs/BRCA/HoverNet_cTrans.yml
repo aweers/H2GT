@@ -9,10 +9,10 @@ pkl_path: './checkpoints/BRCA/final_result/'
 datasets:
   dataset: "BRCA"
   task: "cancer survival"
-  tvt_root: "./train_split/BRCA/train_split" #optional[train_split, train_split_womix, train_split_wotopo]
-  train_path: "/heterogeneous_train.csv"
-  test_path: "/heterogeneous_test.csv"
-  valid_path: "/heterogeneous_val.csv"
+  tvt_root: "./train_csvs" #optional[train_split, train_split_womix, train_split_wotopo]
+  train_path: "/heterogenous_train.csv"
+  test_path: "/heterogenous_test.csv"
+  valid_path: "/heterogenous_val.csv"
   has_graph: True
   num_workers: 16
 
