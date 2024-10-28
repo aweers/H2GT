@@ -96,7 +96,7 @@ def main():
         epoch_num = config["train"]["num_epochs"]
         for idx in range(10, epoch_num + 1, 10):
             fold_result = []
-            for fold in range(1, 6):
+            for fold in args.foldlist:
                 path = os.path.join(save_path, str(fold), "training_stats.json")
                 with open(path, "r") as file:
                     line_number = 0
